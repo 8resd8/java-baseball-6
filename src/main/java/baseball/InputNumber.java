@@ -8,21 +8,18 @@ import java.util.List;
 
 public class InputNumber {
 
-    private final List<Integer> userNumber = new ArrayList<>();
-
 
     // 표준적인 접근 방법
-    public List<Integer> getUserNumber() {
-        return this.userNumber;
-    }
 
-    public void inputNumber () {
+    public List<Integer> inputNumber () {
         String inputNumber = Console.readLine();
         validate(inputNumber);
+        List<Integer> userNumber = new ArrayList<>();
 
         for (char number : inputNumber.toCharArray()) {
             userNumber.add(Integer.parseInt(String.valueOf(number)));
         }
+        return userNumber;
     }
 
     // 숫자가 3개인지, 중복없는 숫자인지, 0 - 9까지의 범위인지
